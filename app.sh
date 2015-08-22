@@ -23,14 +23,6 @@ cd ~/du51-caf && . build/envsetup.sh && lunch du_find7-userdebug
 
 time make -j16 Dialer
 
-############################################################
-# COPY ROM TO DU-OFFICIAL                                  #
-############################################################
-
-# cp ~/du51-caf/out/target/product/yuga/DU_yuga_5*.zip ~/DU-Official/yuga
-# rm -rf ~/du51-caf/out/target/product/yuga
-# make clobber
-
 # Notify user of success
 
 beep -f 784 -r 3 -l 100
