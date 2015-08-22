@@ -16,7 +16,7 @@ export DU_BUILD_TYPE=TEST
 
 # Start build process
 
-cd ~/du51-caf && . build/envsetup.sh && time brunch yuga
+. build/envsetup.sh && time brunch yuga
 
 ############################################################
 # COPY ROM TO DU-OFFICIAL                                  #

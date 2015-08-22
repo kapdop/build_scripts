@@ -18,7 +18,7 @@ export DU_BUILD_TYPE=TEST
 
 # Start build process
 
-cd ~/du51-caf && . build/envsetup.sh && lunch du_find7-userdebug
+. build/envsetup.sh && lunch du_find7-userdebug
 
 time make -j16 bootimage
 
