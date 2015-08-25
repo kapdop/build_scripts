@@ -51,10 +51,11 @@ echo -e "\n"
 
 echo 'Build completed successfully and copied over to DU-Official!'
 
+echo -e "\n"
+
 ############################################################
 # BUILD YUGA                                               #
 ############################################################
-echo -e "\n"
 
 cd ~/du51-caf
 
