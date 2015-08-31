@@ -17,7 +17,8 @@ export USE_PREBUILT_CACHE=1
 export DU_BUILD_TYPE=TEST
 
 # Start build process
-. build/envsetup.sh && time brunch find7
+. build/envsetup.sh && lunch du_find7-userdebug
+time make -j16 bacon
 
 ############################################################
 # COPY ROM TO DU-Official FOLDER                           #

@@ -17,7 +17,8 @@ export USE_PREBUILT_CACHE=1
 export DU_BUILD_TYPE=TEST
 
 # Start build process
-. build/envsetup.sh && time brunch find7
+. build/envsetup.sh && lunch du_find7-userdebug
+time make -j16 bacon
 
 ############################################################
 # COPY ROM TO DU-Official FOLDER                           #
@@ -28,9 +29,9 @@ set -e
 # Copy build from /out folder to DU-Official folder
 cp ~/du51-caf/out/target/product/find7/DU_find7_5*.zip ~/DU-Official/find7a
 
-# espeak "find 7 build is done and copied over to the official folder."
+# # espeak "find 7 build is done and copied over to the official folder."
 # sleep .2
-# espeak "clobbering and starting yuga build now."
+# # espeak "clobbering and starting yuga build now."
 
 # Remove the /out or make clobber
 # rm -rf ~/du51-caf/out/target/product/find7
@@ -51,11 +52,10 @@ echo -e "\n"
 
 echo 'Build completed successfully and copied over to DU-Official!'
 
-echo -e "\n"
-
 ############################################################
 # BUILD YUGA                                               #
 ############################################################
+echo -e "\n"
 
 cd ~/du51-caf
 
@@ -72,7 +72,8 @@ export DU_BUILD_TYPE=TEST
 
 # Start build process
 
-. build/envsetup.sh && time brunch yuga
+. build/envsetup.sh && lunch du_yuga-userdebug
+time make -j16 bacon
 
 ############################################################
 # COPY ROM TO DU-OFFICIAL                                  #

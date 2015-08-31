@@ -16,7 +16,8 @@ export DU_BUILD_TYPE=TEST
 
 # Start build process
 
-. build/envsetup.sh && time brunch yuga
+. build/envsetup.sh && lunch du_yuga-userdebug
+time make -j16 bacon
 
 ############################################################
 # COPY ROM TO DU-OFFICIAL                                  #
